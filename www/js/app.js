@@ -8,7 +8,7 @@ try {
     if(todosInStorage){
         todos = JSON.parse(todosInStorage)
     }else{
-        todos = await fetchJSON('http://jsonplaceholder.typicode.com/todos?_limit=5')
+        todos = await fetchJSON('https://jsonplaceholder.typicode.com/todos?_limit=5')
     }
     const list = new TodoList(todos)
     list.appendTo(document.querySelector('#todolist'))
